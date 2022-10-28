@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Advanced Google Search",
-  "version": "1.0",
+  "name": "Google Advanced Search",
+  "version": "0.0.1",
   "description": "Makes the advanced search capabilities easily available on the toolbar",
   "icons": {
     "128": "images/icon-128.png",
