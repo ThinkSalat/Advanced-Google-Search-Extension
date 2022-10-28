@@ -1,24 +1,25 @@
 window.addEventListener('load', function() {
   const prefMenus = Array.from(document.getElementsByClassName('q0yked'))
-        const advancedSearchElement = prefMenus.filter( element => {
-            return element.children[0].href.includes('advanced')
-        })[0]
+  const advancedSearchElement = prefMenus.filter( element => {
+      return element.children[0].href.includes('advanced')
+  })[0]
 
-        advancedSearchElement.className = 't2vtad'
-        delete advancedSearchElement.style.padding
-        advancedSearchElement.style.fontFamily = 'Google Sans,arial,sans-serif'
+  const link = advancedSearchElement.children[0]
+  link.removeChild(link.children[1])
+  const advancedTextSpan = link.children[0]
 
-        const advancedTextSpan = advancedSearchElement.children[0].children[0]
+  link.style.padding = '4px 11px'
+  link.style.textDecoration = 'none'
+  advancedSearchElement.style.fontFamily = 'Google Sans,arial,sans-serif'
+  advancedSearchElement.style.marginLeft = '18px'
 
-        advancedTextSpan.className = 't2vtad'
+  const toolbar = document.getElementsByClassName('IC1Ck')[0]
 
+  const buttonContainer = toolbar.children[1]
 
-        const toolbar = document.getElementsByClassName('IC1Ck')[0]
+  buttonContainer.appendChild(advancedSearchElement)
 
-        const buttonContainer = toolbar.children[1]
-
-        buttonContainer.appendChild(advancedSearchElement)
-
-        buttonContainer.style.display = 'flex'
-        buttonContainer.style.flexDirection = 'row'
+  advancedSearchElement.className = 't2vtad'
+  buttonContainer.style.display = 'flex'
+  buttonContainer.style.flexDirection = 'row'
 }, false);
